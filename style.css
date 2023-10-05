@@ -1,0 +1,194 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@600&family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+
+  
+}
+nav{
+    background-color: purple;
+    color: white;
+    height: 65px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Tektur', cursive;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+    word-spacing: 10px;
+
+}
+nav ul{
+    list-style: none;
+}
+.gameContainer{
+    background: radial-gradient(circle at -4% -12.9%, rgb(74, 98, 110) 0.3%, rgb(30,33,48) 90.2%);
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.container{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 94px);
+    grid-template-rows: repeat(3, 76px);
+    font-family: 'Changa One';
+    top: 120px;
+    left: 65px;
+}
+   
+
+.box{
+    border: solid 1px rgba(145, 54, 141, 0.247);
+    border-radius: 2px;
+    font-size: 7rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(241, 34, 34);
+    font-family: 'VT323', monospace;
+   
+}
+.boxtext{
+    animation: blink linear infinite 1s;
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 30px #ff2222;
+}
+
+.box:hover{
+  background-color: rgb(219, 216, 221);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+.gameinfo{
+ padding: 0 9px; 
+ color: #2EE59D;
+ font-family: 'Tektur', cursive;;
+
+}
+.game{
+    position: relative;
+    background: url(game-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    background-position: -19px -110px;
+    width: 450px;
+    height: 634px;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width  1s ease-in-out;
+}
+
+#reset{
+    background-color: rgba(199, 245, 245, 0.575);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color:rgb(142, 73, 207);
+    font-size: 20px;
+    margin: 14px 23px;
+    padding: 5px 23px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'VT323', monospace;
+}
+#reset:hover{
+    
+    /* background-color: rgb(153, 219, 219); */
+    background-color: #2EE59D;
+
+    border: none;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+
+   
+}
+.info{
+    font-size: 29px;
+    font-family: 'VT323', monospace;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+
+@media screen and (max-width : 800px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        transform: translate(42px, -272px);
+        
+    }
+    .gameinfo h1{
+        font-size:  1.4rem ;
+    }
+    .container{
+        display: grid;
+       
+    }
+}
+
+@media screen and (max-device-width : 447px){
+    
+    .gameinfo{
+        transform: translate(4px, -337px);
+        
+    }
+    
+    .container{
+       display: grid;
+        grid-template-columns: repeat(3, 75px);
+        grid-template-rows: repeat(3, 55px);
+        top: 110px;
+        left: 62px;
+    }
+    .box{
+        font-size: 4.5rem;
+    }
+}
+
+
+
+
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+
+
+/* blink animation */
+@keyframes blink {
+    70% {
+        opacity: 1;
+    }
+    79% {
+        opacity: 0;
+    }
+    
+    88% {
+        opacity: 1;
+    }
+    
+    96% {
+        opacity: 0;
+    }
+    
+}
